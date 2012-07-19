@@ -1,0 +1,10 @@
+{
+	"port":8080,
+	"server":"localhost",
+	"ni":{"location":"world"},
+	"log":{
+		"console":{
+			"level":"debug","handleExceptions":true,"colorize":true,"timestamp":true
+		}
+	}
+}

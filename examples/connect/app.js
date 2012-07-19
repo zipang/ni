@@ -1,4 +1,4 @@
-/*  
+/*
  *  This is an example of how to use Ni to organize your code into a nice,
  *  neat MVC project.
  *
@@ -16,7 +16,7 @@
 
 var Connect = require('connect'),
     Quip = require('quip'),
-    Ni = require('../lib/ni');
+    Ni = require('ni');
 
 /*
  *  Load Ni and start the server.
@@ -27,17 +27,17 @@ Ni.config('location', "world"); // Sets a custom configuration variable to use
                                 // later, anywhere
 
 Ni.boot(function() {                // Boots Ni and loads everything
-    
+
     var app = Connect.createServer(     // Create server when Ni is finished
                                         // booting
-                                         
+
         Quip(),                             // Helps in sending HTTP responses
-        
+
         Ni.router,                          // The Ni router automatically
                                             // directs requests based on URL
                                             // segments to the appropriate
                                             // controller functions
-                                             
+
         function (req, res, next) {         // Called if no controller /
                                             // function for the URL given is
                                             // found
@@ -45,7 +45,7 @@ Ni.boot(function() {                // Boots Ni and loads everything
 
         }
     );
-    
+
     app.listen(3000);
 
     console.log('Application server started on port 3000');

@@ -9,7 +9,7 @@
  *  Module dependencies
  */
 
-var Ni = require('../../lib/ni');
+var Ni = require('../../../lib/ni');
 
 /*
  *  The home controller
